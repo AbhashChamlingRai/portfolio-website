@@ -1,0 +1,9 @@
+.landing_section div {
+    border: 1px solid red;
+}
+
+@media (min-width: 400px)  {
+    .landing-section-button {
+        justify-content: center;
+    }
+}
