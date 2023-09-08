@@ -1,0 +1,14 @@
+@media (max-width: 639px)  {
+    .side_links_datacamp {
+        width: 25px;
+    }
+    .side_links_github {
+        width: 28px;
+    }
+    .side_links_kaggle {
+        width: 23px;
+    }
+    .side_links_linkedin {
+        width: 26px;
+    }
+}
