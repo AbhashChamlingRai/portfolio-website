@@ -18,7 +18,7 @@ const SideLinks = () => {
         href="https://www.datacamp.com/portfolio/abhash-rai/"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex justify-center"
+        className="flex justify-center transform hover:scale-110 transition-transform duration-300"
       >
         <img
           src={datacampLogo}
@@ -30,7 +30,7 @@ const SideLinks = () => {
         href="https://github.com/AbhashChamlingRai/"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex justify-center"
+        className="flex justify-center transform hover:scale-110 transition-transform duration-300"
       >
         <img src={githubLogo} className="side_links_github" alt="githubLogo" />
       </a>
@@ -38,7 +38,7 @@ const SideLinks = () => {
         href="https://www.kaggle.com/abhashrai/"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex justify-center"
+        className="flex justify-center transform hover:scale-110 transition-transform duration-300"
       >
         <img src={kaggleLogo} className="side_links_kaggle" alt="kaggleLogo" />
       </a>
@@ -46,7 +46,7 @@ const SideLinks = () => {
         href="https://www.linkedin.com/in/abhash-rai/"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex justify-center"
+        className="flex justify-center transform hover:scale-110 transition-transform duration-300"
       >
         <img
           src={linkedinLogo}
