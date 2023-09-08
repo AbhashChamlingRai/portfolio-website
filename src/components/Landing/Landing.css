@@ -2,6 +2,63 @@
     /* border: 1px solid red; */
 }
 
+ul{
+    display: inline;
+  }
+.arrow1{
+    /* width: 5%; */
+    animation: scrollIndicator 2s linear infinite;
+}
+.arrow2{
+    /* width: 5%; */
+    animation: scrollIndicator1 2s linear infinite;
+}
+.arrow3{
+    /* width: 5%; */
+    animation: scrollIndicator2 2s linear infinite;
+}
+
+@keyframes scrollIndicator {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(4px); /* Adjust the distance for the effect */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollIndicator1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(4px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes scrollIndicator2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.9;
+    transform: translateY(4px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+  
 @media (max-width: 639px)  {
     .full_name_text {
         font-size: 30px;

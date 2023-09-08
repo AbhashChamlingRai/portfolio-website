@@ -1,6 +1,7 @@
 import "./Landing.css";
 import LandingDP from "../../images/dp.png";
 import Typewriter from "typewriter-effect";
+import downArrow from "../../images/icons/down.png";
 
 const Landing = () => {
   return (
@@ -71,6 +72,19 @@ const Landing = () => {
             </a>
           </div>
         </div>
+      </div>
+      <div className="absolute bottom-3 right-0 xl:flex lg:flex md:flex sm:hidden">
+        <ul className="flex flex-col">
+          <li>
+            <img src={downArrow} className="arrow1 w-1/3" alt="down arrow" />
+          </li>
+          <li>
+            <img src={downArrow} className="arrow2 w-1/3" alt="down arrow" />
+          </li>
+          <li>
+            <img src={downArrow} className="arrow3 w-1/3" alt="down arrow" />
+          </li>
+        </ul>
       </div>
     </>
   );
