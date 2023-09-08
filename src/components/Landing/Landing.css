@@ -1,9 +1,14 @@
 .landing_section, .landing_section div {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
-/* @media (min-width: 400px)  {
-    .landing-section-button {
-        justify-content: center;
+@media (max-width: 639px)  {
+    .full_name_text {
+        font-size: 30px;
     }
-} */
+    .work_title {}
+    .personality {
+        font-size: 12.5px;
+        padding-left: 30px;
+    }
+}

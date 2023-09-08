@@ -38,13 +38,30 @@ const Landing = () => {
   return (
     <>
       <div className="w-full py-9"></div>
-      <div className="landing_section container mx-auto pt-20 xl:px-52 lg:px-30 md:px-16 sm:px-0">
+      <div className="landing_section container mx-auto py-20 xl:px-52 lg:px-30 md:px-16 sm:px-0">
         <div className="flex flex-wrap justify-center w-full gap-10">
           <div className="flex flex-1 justify-center">
             <img src={LandingDP} className="w-80" alt="logo" />
           </div>
           {/* <div className="flex flex-0.5"></div> */}
-          <div className="flex flex-1"></div>
+          <div className="flex flex-1 flex-col gap-2 justify-center">
+            <div className="full_name_text flex justify-start text-custom-light-blue font-bold xl:text-5xl lg:text-5xl md:text-5xl sm:text-4xl">
+              Abhash Rai
+            </div>
+            <div className="work_title flex justify-start xl:text-2xl">
+              Junior Data Analyst & Tutor
+            </div>
+            <div className="personality flex justify-start text-left pl-10 pt-5 xl:text-xl">
+              🎷 Jazz lover
+              <br />
+              🧠 Problem solver
+              <br />
+              📊 Occasional data whiz
+              <br />
+              📧 avash.cmling@gmail.com
+              <br />
+            </div>
+          </div>
         </div>
         <div className="w-full py-4"></div>
         <div className="flex w-full flex-wrap gap-10 justify-between">
