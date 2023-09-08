@@ -14,20 +14,40 @@ const SideLinks = () => {
         xl:left-10 lg:left-10 md:left-10 sm:left-4
         flex flex-col justify-center gap-2"
     >
-      <a href="" className="flex justify-center">
+      <a
+        href="https://www.datacamp.com/portfolio/abhash-rai/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex justify-center"
+      >
         <img
           src={datacampLogo}
           className="side_links_datacamp"
           alt="datacampLogo"
         />
       </a>
-      <a href="" className="flex justify-center">
+      <a
+        href="https://github.com/AbhashChamlingRai/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex justify-center"
+      >
         <img src={githubLogo} className="side_links_github" alt="githubLogo" />
       </a>
-      <a href="" className="flex justify-center">
+      <a
+        href="https://www.kaggle.com/abhashrai/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex justify-center"
+      >
         <img src={kaggleLogo} className="side_links_kaggle" alt="kaggleLogo" />
       </a>
-      <a href="" className="flex justify-center">
+      <a
+        href="https://www.linkedin.com/in/abhash-rai/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex justify-center"
+      >
         <img
           src={linkedinLogo}
           className="side_links_linkedin"
