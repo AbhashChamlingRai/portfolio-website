@@ -2,6 +2,10 @@
     /* border: 1px solid red; */
 }
 
+/* .increase_size_on_hover:hover {
+    scale: 2;
+} */
+
 @media (max-width: 639px)  {
     .full_name_text {
         font-size: 30px;
