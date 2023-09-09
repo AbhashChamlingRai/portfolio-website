@@ -37,7 +37,7 @@ const Landing = () => {
             <a
               href="#"
               download=""
-              className="landing_section_border_size_control download_cv_button z-[-1] xl:w-auto lg:w-auto md:w-2/3 flex justify-center 2xl:text-3xl xl:text-2xl lg:text-lg font-light border-2 rounded-md border-custom-light-blue text-custom-light-blue px-7 py-2 box-border transform hover:scale-110 transition-transform duration-300"
+              className="landing_section_border_size_control download_cv_button z-[0] xl:w-auto lg:w-auto md:w-2/3 flex justify-center 2xl:text-3xl xl:text-2xl lg:text-lg font-light border-2 rounded-md border-custom-light-blue text-custom-light-blue px-7 py-2 box-border transform hover:scale-110 transition-transform duration-300"
             >
               Download CV
             </a>
@@ -45,7 +45,7 @@ const Landing = () => {
           <div className="landing-section-button flex flex-1 justify-start">
             <a
               href="#"
-              className="landing_section_border_size_control contact_button z-[-1] xl:w-auto lg:w-auto md:w-2/3 flex justify-center 2xl:text-3xl xl:text-2xl lg:text-lg font-regular border-0 rounded-md bg-custom-light-blue text-custom-dark-blue px-12 py-2 box-border transform hover:scale-110 transition-transform duration-300"
+              className="landing_section_border_size_control contact_button z-[0] xl:w-auto lg:w-auto md:w-2/3 flex justify-center 2xl:text-3xl xl:text-2xl lg:text-lg font-regular border-0 rounded-md bg-custom-light-blue text-custom-dark-blue px-12 py-2 box-border transform hover:scale-110 transition-transform duration-300"
             >
               {/* Let's Talk */}
               <Typewriter
