@@ -73,7 +73,7 @@ const Landing = () => {
           </div>
         </div>
       </div>
-      <div className="scroll_down absolute bottom-3 right-0 xl:flex lg:flex md:flex sm:hidden">
+      <div className="scroll_down absolute bottom-3 z-[-1] right-0 xl:flex lg:flex md:flex sm:hidden">
         <ul className="flex flex-col">
           <li>
             <img src={downArrow} className="arrow1 w-1/3" alt="down arrow" />
