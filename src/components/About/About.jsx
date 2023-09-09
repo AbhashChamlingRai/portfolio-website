@@ -19,7 +19,7 @@ const AboutContent = () => {
       text-sm 
       text-left sm:text-center md:text-center lg:text-left xl:text-left 2xl:text-left
       sm:text-sm md:text-sm lg:text-lg xl:text-lg 2xl:text-lg
-      sm:px-8 md:px-8 lg:px-0 xl:px-0 2xl:px-0"
+      "
     >
       A firm believer in the power of data seeking challenging projects. My
       expertise lies in turning data into visual stories and actionable insights
@@ -62,7 +62,7 @@ const About = () => {
   return (
     <div
       className="about_section container mx-auto py-20
-      sm:px-10 md:px-16 lg:px-10 xl:px-32"
+      sm:px-10 md:px-16 lg:px-10 xl:px-32 2xl:px-40"
     >
       <div
         className="
@@ -119,7 +119,7 @@ const About = () => {
               </Tabs>
             </Paper>
           </ThemeProvider>
-          <div className="flex justify-center h-full">
+          <div className="flex justify-center sm:h-full md:h-full lg:h-full xl:h-full 2xl:h-auto">
             {value === 0 && <AboutContent />}
             {value === 1 && <SkillsContent />}
             {value === 2 && <ExperienceContent />}
