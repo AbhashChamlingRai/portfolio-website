@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Landing from "./components/Landing/Landing";
 import SideLinks from "./components/SideLinks/SideLinks";
+import About from "./components/About/About";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Navbar />
         <SideLinks />
         <Landing />
+        <About />
       </div>
     </BrowserRouter>
   );

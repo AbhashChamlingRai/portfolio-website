@@ -1,0 +1,83 @@
+.about_section, .about_section div {
+    /* border: 1px solid red; */
+}
+.about_section {
+    font-family: 'Raleway', sans-serif;
+}
+.css-4z9bxz-MuiPaper-root {
+    box-shadow: none !important;
+}
+.MuiTab-root {
+    color: white !important;
+}
+.MuiTab-textColorPrimary.Mui-selected {
+    color: #45DBE2 !important; /* Replace with your desired color */
+}
+.MuiTabs-scroller {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.tabs-container .about_me_tab,
+.tabs-container .skills_tab,
+.tabs-container .experience_tab {
+    font-size: 20px; /* Default font size */
+}
+
+/* Media query for screens with a minimum width of 1280px */
+@media (max-width: 1280px) {
+    .tabs-container .about_me_tab,
+    .tabs-container .skills_tab,
+    .tabs-container .experience_tab {
+        font-size: 18px !important;
+    }
+}
+
+/* Media query for screens with a minimum width of 1024px */
+@media (max-width: 1024px) {
+    .tabs-container .about_me_tab,
+    .tabs-container .skills_tab,
+    .tabs-container .experience_tab {
+        font-size: 15px !important;
+    }
+}
+
+/* Media query for screens with a minimum width of 768px */
+@media (max-width: 768px) {
+    .tabs-container .about_me_tab,
+    .tabs-container .skills_tab,
+    .tabs-container .experience_tab {
+        font-size: 16px !important;
+    }
+}
+
+/* Media query for screens with a minimum width of 640px */
+@media (max-width: 640px) {
+    .tabs-container .about_me_tab,
+    .tabs-container .skills_tab,
+    .tabs-container .experience_tab {
+        font-size: 14px !important;
+    }
+    .about_section_inner {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .aboutPortraitImg {
+        width: 70%;
+    }
+    .aboutPortraitImg_container {
+        display: flex;
+        justify-content: center;
+    }
+    .about_section {
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 30%;
+        padding-bottom: 30%;
+    }
+    .AboutContent {
+        text-align: center;
+        font-size: 0.78rem;
+    }
+}
