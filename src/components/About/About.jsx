@@ -1,12 +1,13 @@
 import React from "react";
 import "./About.css";
 import aboutPortraitImg from "../../images/portrait.png";
+import data_analysis_icon from "../../images/icons/data_analysis_icon.png";
+import machine_learning_icon from "../../images/icons/machine_learning_icon.png";
+import web_dev_icon from "../../images/icons/web_dev_icon.png";
 
 import Paper from "@mui/material/Paper";
-
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import Box from "@mui/material/Box";
 import { useState } from "react";
 import { ThemeProvider, createTheme } from "@mui/material";
 
@@ -41,7 +42,89 @@ const AboutContent = () => {
 };
 
 const SkillsContent = () => {
-  return <div className="">SkillsContent</div>;
+  const data_analysis_skills = [
+    "Statistics",
+    "Python/SQL",
+    "Jupyter",
+    "Pandas/Numpy",
+    "Matplotlib/Seaborn",
+  ];
+  const machine_learning_skills = ["Python", "Tensorflow", "Scikit-Learn"];
+  const web_development_skills = ["Html/Css/Js", "Figma", "React", "Git"];
+
+  return (
+    <div className="SkillsContent w-full flex flex-col gap-8 sm:gap-8 md:gap-8 lg:gap-6 xl:gap-6 2xl:gap-10">
+      <div className="h-[15%] w-full px-2 flex justify-center items-center text-sm sm:text-md md:text-[16px] lg:text-[17px] xl:text-lg 2xl:text-xl">
+        Technical competencies in many areas with a key proficiency in data
+        analysis 📊
+      </div>
+      <div className="h-[85%] w-full flex flex-row gap-3 justify-center items-center">
+        <div className="flex-1 h-full flex flex-col gap-8">
+          <div className="flex flex-col gap-3">
+            <div className="flex justify-center">
+              <img
+                src={data_analysis_icon}
+                className="data_analysis_icon drop-shadow-lg w-14"
+                alt="data_analysis_icon"
+              />
+            </div>
+            <div className="skills_title skills_title_data_analytics text-[14px] sm:text-[14.5px] md:text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-xl mx-10 xs:mx-10 sm:mx-0 md:mx-0 lg:mx-0 xl:mx-0 2xl:mx-0">
+              Data Analysis
+            </div>
+          </div>
+          <div className="">
+            <ul className="skills_listed flex flex-col gap-1 font-extralight text-[13px] sm:text-sm md:text-md lg:text-md xl:text-[17px] 2xl:text-lg">
+              {data_analysis_skills.map((skill, index) => (
+                <li key={index}>{skill}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className="middle_skill_section flex-1 h-full flex flex-col gap-8 border-l-2 border-r-2 border-custom-light-blue">
+          <div className="flex flex-col gap-3">
+            <div className="flex justify-center">
+              <img
+                src={machine_learning_icon}
+                className="machine_learning_icon drop-shadow-lg w-14"
+                alt="machine_learning_icon"
+              />
+            </div>
+            <div className="skills_title text-[14px] sm:text-[14.5px] md:text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-xl mx-6 xs:mx-6 sm:mx-0 md:mx-0 lg:mx-0 xl:mx-0 2xl:mx-0">
+              Machine Learning
+            </div>
+          </div>
+          <div className="">
+            <ul className="skills_listed flex flex-col gap-1 font-extralight text-[13px] sm:text-sm md:text-md lg:text-md xl:text-[17px] 2xl:text-lg">
+              {machine_learning_skills.map((skill, index) => (
+                <li key={index}>{skill}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className="flex-1 h-full flex flex-col gap-8">
+          <div className="flex flex-col gap-3">
+            <div className="flex justify-center">
+              <img
+                src={web_dev_icon}
+                className="web_dev_icon drop-shadow-lg w-14"
+                alt="web_dev_icon"
+              />
+            </div>
+            <div className="skills_title text-[14px] sm:text-[14.5px] md:text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-xl mx-3 xs:mx-3 sm:mx-0 md:mx-0 lg:mx-0 xl:mx-0 2xl:mx-0">
+              Web Development
+            </div>
+          </div>
+          <div className="">
+            <ul className="skills_listed flex flex-col gap-1 font-extralight text-[13px] sm:text-sm md:text-md lg:text-md xl:text-[17px] 2xl:text-lg">
+              {web_development_skills.map((skill, index) => (
+                <li key={index}>{skill}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 const ExperienceContent = () => {

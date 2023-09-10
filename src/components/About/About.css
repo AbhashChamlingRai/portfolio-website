@@ -1,6 +1,9 @@
 .about_section, .about_section div {
     /* border: 1px solid red; */
 }
+.SkillsContent, .SkillsContent div {
+    /* border: 1px solid red; */
+}
 .about_section {
     font-family: 'Raleway', sans-serif;
 }
@@ -79,5 +82,44 @@
     .AboutContent {
         text-align: center;
         font-size: 0.78rem;
+    }
+    .data_analysis_icon{
+        width: 50px;
+    }
+    .machine_learning_icon {
+        width: 50px;
+    }
+    .web_dev_icon {
+        width: 50px;
+    }
+    .middle_skill_section {
+        border-right-width: 1px;
+        border-left-width: 1px;
+    }
+}
+
+@media (max-width: 430px) {
+    .skills_title {
+        font-size: 12px;
+    }
+    /* .skills_title_data_analytics {
+        margin-left: 5%;
+        margin-right: 5%;
+    } */
+    .skills_listed {
+        font-size: 11px;
+    }
+    .data_analysis_icon{
+        width: 40px;
+    }
+    .machine_learning_icon {
+        width: 40px;
+    }
+    .web_dev_icon {
+        width: 40px;
+    }
+    .middle_skill_section {
+        border-right-width: 0.5px;
+        border-left-width: 0.5px;
     }
 }
