@@ -243,7 +243,7 @@ const About = () => {
               className=""
             >
               <Tabs
-                className="tabs-container flex justify-center"
+                className="tabs-container flex justify-center w-full"
                 style={{
                   backgroundColor: "transparent",
                   border: "0",
@@ -253,6 +253,9 @@ const About = () => {
                 value={value}
                 textColor="primary"
                 indicatorColor="primary"
+                variant="scrollable"
+                scrollButtons="auto"
+                allowScrollButtonsMobile
                 onChange={(event, newValue) => {
                   setValue(newValue);
                 }}

@@ -136,6 +136,9 @@
     .date_company_container {
         gap: 5%;
     }
+    .MuiTabs-scroller {
+        justify-content: start !important;
+    }
 }
 @media (max-width: 430px) {
     .skills_title {
