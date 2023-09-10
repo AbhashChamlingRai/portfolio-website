@@ -4,6 +4,7 @@ import aboutPortraitImg from "../../images/portrait.png";
 import data_analysis_icon from "../../images/icons/data_analysis_icon.png";
 import machine_learning_icon from "../../images/icons/machine_learning_icon.png";
 import web_dev_icon from "../../images/icons/web_dev_icon.png";
+import location_icon from "../../images/icons/location_icon.png";
 
 import Paper from "@mui/material/Paper";
 import Tabs from "@mui/material/Tabs";
@@ -128,7 +129,67 @@ const SkillsContent = () => {
 };
 
 const ExperienceContent = () => {
-  return <div className="">ExperienceContent</div>;
+  const workExperiences = [
+    {
+      jobTitle: "Data Science Intern",
+      date: "Nov 2023 - Present",
+      company: "LetsGrowMore",
+      description:
+        "Undertook a variety of projects, encompassing classification, time series forecasting, recommendation systems, image processing, exploratory data analysis, advanced tasks such as hand-written digit classification with CNN, next-word prediction with RNN, hand-written equation solving with CNN, and facial emotion classification.",
+    },
+    {
+      jobTitle: "Data Fellowship",
+      date: "Aug 2023 - Present",
+      company: "Sunway Student Representative Council",
+      description:
+        'Undertaking DataCamp courses to earn "Professional Data Scientist certificate" while also working on data science projects, articles, instructional videos, mentoring, and sharing knowledge with the community.',
+    },
+    {
+      jobTitle: "Academic Tutor",
+      date: "Dec 2022 - Present",
+      company: "Self-Employed",
+      description:
+        "Tutored various subjects up to 8th grade, customized teaching methods, monitored progress, maintained  effective parent communication - Elevated a student's math performance from failing to an impressive 75% in 2 months.",
+    },
+  ];
+
+  function WorkExperience({ jobTitle, date, company, description }) {
+    return (
+      <div className="experience flex flex-col gap-2">
+        <div className="w-full text-left font-bold text-[16px] sm:text-lg md:text-lg lg:text-[19px] xl:text-xl 2xl:text-2xl">
+          {jobTitle}
+        </div>
+        <div className="date_company_container flex flex-row text-left text-[13px] sm:text-[13.5px] md:text-[15px] lg:text-[15px] xl:text-md 2xl:text-lg">
+          <div className=" text-left text-custom-light-blue">{date}</div>
+          <div className="location_icon flex items-center ml-4 mr-6">
+            <img src={location_icon} className="" alt="location_icon" />
+          </div>
+          <div className=" text-center font-extralight flex justify-start items-center">
+            {company}
+          </div>
+        </div>
+        <div className="text-left text-[13px] sm:text-[13.5px] md:text-[15px] lg:text-[15px] xl:text-md 2xl:text-lg">
+          {description}
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="ExperienceContent">
+      <div className="ExperienceContent_inner flex flex-col gap-8">
+        {workExperiences.map((experience, index) => (
+          <WorkExperience
+            key={index}
+            jobTitle={experience.jobTitle}
+            date={experience.date}
+            company={experience.company}
+            description={experience.description}
+          />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 const About = () => {

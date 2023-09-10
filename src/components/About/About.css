@@ -1,7 +1,7 @@
 .about_section, .about_section div {
     /* border: 1px solid red; */
 }
-.SkillsContent, .SkillsContent div {
+.ExperienceContent, .ExperienceContent div {
     /* border: 1px solid red; */
 }
 .about_section {
@@ -98,6 +98,14 @@
     }
 }
 
+@media (max-width: 600px) {
+    .location_icon {
+        display: none;
+    }
+    .date_company_container {
+        gap: 5%;
+    }
+}
 @media (max-width: 430px) {
     .skills_title {
         font-size: 12px;
