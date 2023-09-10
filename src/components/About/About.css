@@ -1,7 +1,7 @@
 .about_section, .about_section div {
     /* border: 1px solid red; */
 }
-.ExperienceContent, .ExperienceContent div {
+.SkillsContent, .SkillsContent div {
     /* border: 1px solid red; */
 }
 .about_section {
@@ -93,8 +93,39 @@
         width: 50px;
     }
     .middle_skill_section {
-        border-right-width: 1px;
-        border-left-width: 1px;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+        border-left-width: 0;
+        border-right-width: 0;
+    }
+    .left_skill_section {
+        border-top-width: 1px;
+        border-color: #45DBE2;
+    }
+    .right_skill_section {
+        border-bottom-width: 1px;
+        border-color: #45DBE2;
+    }
+    .SkillsContent_skills_container_outer {
+        flex-direction: column;
+    }
+    .SkillsContent_skills_container {
+        flex-direction: row;
+        width: 80%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .skill_title {
+        width: 40%;
+    }
+    .skills_list_container {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .skills_title {
+        margin: 0;
     }
 }
 
@@ -125,9 +156,5 @@
     }
     .web_dev_icon {
         width: 40px;
-    }
-    .middle_skill_section {
-        border-right-width: 0.5px;
-        border-left-width: 0.5px;
     }
 }

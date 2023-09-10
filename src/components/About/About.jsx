@@ -59,9 +59,9 @@ const SkillsContent = () => {
         Technical competencies in many areas with a key proficiency in data
         analysis 📊
       </div>
-      <div className="h-[85%] w-full flex flex-row gap-3 justify-center items-center">
-        <div className="flex-1 h-full flex flex-col gap-8">
-          <div className="flex flex-col gap-3">
+      <div className="SkillsContent_skills_container_outer h-[85%] w-full flex flex-row gap-3 justify-center items-center">
+        <div className="SkillsContent_skills_container left_skill_section flex-1 h-full flex flex-col gap-8">
+          <div className="skill_title flex flex-col gap-3">
             <div className="flex justify-center">
               <img
                 src={data_analysis_icon}
@@ -73,7 +73,7 @@ const SkillsContent = () => {
               Data Analysis
             </div>
           </div>
-          <div className="">
+          <div className="skills_list_container">
             <ul className="skills_listed flex flex-col gap-1 font-extralight text-[13px] sm:text-sm md:text-md lg:text-md xl:text-[17px] 2xl:text-lg">
               {data_analysis_skills.map((skill, index) => (
                 <li key={index}>{skill}</li>
@@ -81,8 +81,8 @@ const SkillsContent = () => {
             </ul>
           </div>
         </div>
-        <div className="middle_skill_section flex-1 h-full flex flex-col gap-8 border-l-2 border-r-2 border-custom-light-blue">
-          <div className="flex flex-col gap-3">
+        <div className="SkillsContent_skills_container middle_skill_section flex-1 h-full flex flex-col gap-8 border-l-2 border-r-2 border-custom-light-blue">
+          <div className="skill_title flex flex-col gap-3">
             <div className="flex justify-center">
               <img
                 src={machine_learning_icon}
@@ -94,7 +94,7 @@ const SkillsContent = () => {
               Machine Learning
             </div>
           </div>
-          <div className="">
+          <div className="skills_list_container">
             <ul className="skills_listed flex flex-col gap-1 font-extralight text-[13px] sm:text-sm md:text-md lg:text-md xl:text-[17px] 2xl:text-lg">
               {machine_learning_skills.map((skill, index) => (
                 <li key={index}>{skill}</li>
@@ -102,8 +102,8 @@ const SkillsContent = () => {
             </ul>
           </div>
         </div>
-        <div className="flex-1 h-full flex flex-col gap-8">
-          <div className="flex flex-col gap-3">
+        <div className="SkillsContent_skills_container right_skill_section flex-1 h-full flex flex-col gap-8">
+          <div className="skill_title flex flex-col gap-3">
             <div className="flex justify-center">
               <img
                 src={web_dev_icon}
@@ -115,7 +115,7 @@ const SkillsContent = () => {
               Web Development
             </div>
           </div>
-          <div className="">
+          <div className="skills_list_container">
             <ul className="skills_listed flex flex-col gap-1 font-extralight text-[13px] sm:text-sm md:text-md lg:text-md xl:text-[17px] 2xl:text-lg">
               {web_development_skills.map((skill, index) => (
                 <li key={index}>{skill}</li>
