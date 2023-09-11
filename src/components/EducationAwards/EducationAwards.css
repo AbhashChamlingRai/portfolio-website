@@ -5,11 +5,13 @@
     width: 50%;
 } */
 
-.active {
-    color: #45DBE2;
-    font-weight: bold;
+.EducationAwards {
+    font-family: 'Raleway', sans-serif;
 }
 
+.EducationAwards_active {
+    color: #45DBE2;
+}
 
 @media (max-width:640px) {
     .sticky_sidebar {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import StickyBox from "react-sticky-box";
 import "./EducationAwards.css";
 
@@ -158,15 +158,30 @@ const AwardsContentCreator = () => {
 };
 
 const EducationAwards = () => {
+  const [educationText, setEducationText] = useState("Education");
+  const [awardsText, setAwardsText] = useState("Education");
+
+  const handleUpdateCallback = (id) => {
+    // Check the ID of the active element and set content accordingly
+    if (id === "education_section") {
+      setEducationText("*Education");
+      setAwardsText("Awards");
+    } else if (id === "awards_section") {
+      setEducationText("Education");
+      setAwardsText("*Awards");
+    }
+    console.log(id);
+  };
+
   return (
     <div
       style={{ display: "flex", alignItems: "flex-start" }}
       className="EducationAwards container mx-auto py-20
-        px-12 sm:px-10 md:px-6 lg:px-13 xl:px-32 2xl:px-40
+        px-12 sm:px-10 md:px-10 lg:px-13 xl:px-32 2xl:px-40
         flex gap-3 sm:gap-14 md:gap-14 lg:gap-4 xl:gap-4"
     >
       <StickyBox
-        className="sticky_sidebar w-[30%] font-semibold text-[16px] sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl"
+        className="sticky_sidebar w-[32%] font-semibold text-[16px] sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl"
         offsetTop={200}
         offsetBottom={20}
       >
@@ -175,19 +190,21 @@ const EducationAwards = () => {
           id="education_text"
           data-to-scrollspy-id="education_section"
         >
-          Education
+          {educationText}
         </div>
         <div
           className="text-left transition-all duration-300 ease-in-out"
           data-to-scrollspy-id="awards_section"
         >
-          Awards
+          {awardsText}
         </div>
       </StickyBox>
 
       <ScrollSpy
+        activeClass="EducationAwards_active"
         scrollThrottle={80}
         useBoxMethod
+        onUpdateCallback={handleUpdateCallback}
         className="flex-auto flex flex-col text-[13px] sm:text-[13.5px] md:text-[15px] lg:text-[15px] xl:text-md 2xl:text-lg"
       >
         <EducationContentCreator />
