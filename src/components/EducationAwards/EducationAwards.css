@@ -1,0 +1,12 @@
+.EducationAwards, .EducationAwards div {
+    /* border: 1px solid red; */
+}
+/* .eduLogos:last-of-type {
+    width: 50%;
+} */
+
+@media (max-width:640px) {
+    .sticky_sidebar {
+        display: none;
+    }
+}

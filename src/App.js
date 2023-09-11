@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Landing from "./components/Landing/Landing";
 import SideLinks from "./components/SideLinks/SideLinks";
 import About from "./components/About/About";
+import EducationAwards from "./components/EducationAwards/EducationAwards";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <SideLinks />
         <Landing />
         <About />
+        <EducationAwards />
       </div>
     </BrowserRouter>
   );
