@@ -23,3 +23,8 @@
 body {
   background-color: #1F1F38;
 }
+
+
+.active-scroll-spy {
+  color: #45DBE2;
+}

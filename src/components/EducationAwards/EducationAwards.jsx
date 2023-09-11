@@ -2,6 +2,8 @@ import React from "react";
 import StickyBox from "react-sticky-box";
 import "./EducationAwards.css";
 
+import ScrollSpy from "react-ui-scrollspy";
+
 import aitmLogo from "../../images/logo/aitm.png";
 import worldquantLogo from "../../images/logo/worldquant.png";
 import pinnacleLogo from "../../images/logo/pinnacle.png";
@@ -57,7 +59,7 @@ const EducationContentCreator = () => {
     },
   ];
   return (
-    <>
+    <div id="education_section">
       <div className="font-bold text-left text-[16px] sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl">
         Education
       </div>
@@ -86,7 +88,7 @@ const EducationContentCreator = () => {
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
@@ -116,7 +118,7 @@ const AwardsContentCreator = () => {
     },
   ];
   return (
-    <div className="mt-40">
+    <div id="awards_section" className="mt-40">
       <div className="font-bold text-left text-[16px] sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl">
         Awards
       </div>
@@ -132,11 +134,11 @@ const AwardsContentCreator = () => {
               className="w-[30px] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[60%]"
             />
           </div>
-          <div className="w-[90%] flex flex-col gap-2">
+          <div className="w-[90%] flex flex-col  gap-2 text-[13px] sm:text-[13.5px] md:text-[15px] lg:text-[15px] xl:text-md 2xl:text-lg">
             <div className="flex flex-wrap justify-start font-bold text-left">
               {item.title}
             </div>
-            <div className="text-left">
+            <div className="text-left flex flex-row">
               <span className="flex flex-wrap text-left">— {item.by}</span>
               <span className="flex flex-wrap text-left ml-3 font-extralight text-custom-light-blue">
                 ({item.date})
@@ -165,16 +167,32 @@ const EducationAwards = () => {
     >
       <StickyBox
         className="sticky_sidebar w-[30%] font-semibold text-[16px] sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl"
-        offsetTop={100}
+        offsetTop={200}
         offsetBottom={20}
       >
-        <div className="text-left">Education</div>
-        <div className="text-left">Awards</div>
+        <div
+          className="text-left transition-all duration-300 ease-in-out"
+          id="education_text"
+          data-to-scrollspy-id="education_section"
+        >
+          Education
+        </div>
+        <div
+          className="text-left transition-all duration-300 ease-in-out"
+          data-to-scrollspy-id="awards_section"
+        >
+          Awards
+        </div>
       </StickyBox>
-      <div className="flex-auto flex flex-col text-[13px] sm:text-[13.5px] md:text-[15px] lg:text-[15px] xl:text-md 2xl:text-lg">
+
+      <ScrollSpy
+        scrollThrottle={80}
+        useBoxMethod
+        className="flex-auto flex flex-col text-[13px] sm:text-[13.5px] md:text-[15px] lg:text-[15px] xl:text-md 2xl:text-lg"
+      >
         <EducationContentCreator />
         <AwardsContentCreator />
-      </div>
+      </ScrollSpy>
     </div>
   );
 };

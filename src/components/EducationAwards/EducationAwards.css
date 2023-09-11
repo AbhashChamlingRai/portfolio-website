@@ -5,6 +5,12 @@
     width: 50%;
 } */
 
+.active {
+    color: #45DBE2;
+    font-weight: bold;
+}
+
+
 @media (max-width:640px) {
     .sticky_sidebar {
         display: none;
