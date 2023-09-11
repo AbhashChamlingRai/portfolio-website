@@ -10,6 +10,7 @@ const SideLinks = () => {
     <div
       className="
         fixed 
+        z-[100]
         bottom-0
         xl:left-10 lg:left-10 md:left-10 sm:left-4
         flex flex-col justify-center gap-2"
