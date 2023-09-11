@@ -12,7 +12,7 @@ const SideLinks = () => {
         fixed 
         z-[100]
         bottom-0
-        xl:left-10 lg:left-10 md:left-10 sm:left-4
+        xl:left-10 lg:left-2 md:left-2 sm:left-2 left-0
         flex flex-col justify-center gap-2"
     >
       <a
