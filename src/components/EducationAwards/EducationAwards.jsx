@@ -118,7 +118,10 @@ const AwardsContentCreator = () => {
     },
   ];
   return (
-    <div id="awards_section" className="mt-40">
+    <div
+      id="awards_section"
+      className="pt-28 sm:pt-48 md:pt-48 lg:pt-40 xl:pt-40"
+    >
       <div className="font-bold text-left text-[16px] sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl">
         Awards
       </div>
@@ -157,7 +160,11 @@ const AwardsContentCreator = () => {
   );
 };
 
-const EducationAwards = () => {
+const EducationAwards = ({
+  container_classes,
+  headers_classes,
+  normal_text_classes,
+}) => {
   const [educationText, setEducationText] = useState("Education");
   const [awardsText, setAwardsText] = useState("Education");
 
@@ -176,9 +183,9 @@ const EducationAwards = () => {
   return (
     <div
       style={{ display: "flex", alignItems: "flex-start" }}
-      className="EducationAwards container mx-auto py-20
-        px-12 sm:px-10 md:px-10 lg:px-13 xl:px-32 2xl:px-40
-        flex gap-3 sm:gap-14 md:gap-14 lg:gap-4 xl:gap-4"
+      className={`EducationAwards px-14 ${container_classes}
+      pt-28 sm:pt-48 md:pt-48 lg:pt-40 xl:pt-40
+        flex gap-3 sm:gap-14 md:gap-14 lg:gap-4 xl:gap-4`}
     >
       <StickyBox
         className="sticky_sidebar w-[32%] font-semibold text-[16px] sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl"

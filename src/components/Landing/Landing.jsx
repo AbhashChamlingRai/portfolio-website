@@ -3,13 +3,19 @@ import LandingDP from "../../images/dp.png";
 import Typewriter from "typewriter-effect";
 import downArrow from "../../images/icons/down.png";
 
-const Landing = () => {
+const Landing = ({
+  container_classes,
+  headers_classes,
+  normal_text_classes,
+}) => {
   return (
     <>
       <div className="w-full py-9"></div>
-      <div className="landing_section container mx-auto py-20 xl:px-52 lg:px-30 md:px-16 sm:px-0">
+      <div
+        className={`landing_section ${container_classes} pt-28 sm:pt-24 md:pt-16 lg:pt-20 xl:pt-28`}
+      >
         <div className="landing_section_inner flex flex-wrap justify-center w-full gap-10">
-          <div className="flex flex-1 justify-center">
+          <div className="flex flex-1 justify-end">
             <img src={LandingDP} className="w-80" alt="logo" />
           </div>
           <div className="flex flex-1 flex-col gap-2 justify-center">
@@ -37,7 +43,7 @@ const Landing = () => {
             <a
               href="#"
               download=""
-              className="landing_section_border_size_control download_cv_button z-[0] xl:w-auto lg:w-auto md:w-2/3 flex justify-center 2xl:text-3xl xl:text-2xl lg:text-lg font-light border-2 rounded-md border-custom-light-blue text-custom-light-blue px-7 py-2 box-border transform hover:scale-110 transition-transform duration-300"
+              className="landing_section_border_size_control download_cv_button z-[0] w-auto md:w-[60%] lg:w-auto xl:w-auto flex justify-center 2xl:text-3xl xl:text-2xl lg:text-lg font-light border-2 rounded-md border-custom-light-blue text-custom-light-blue px-7 py-2 box-border transform hover:scale-110 transition-transform duration-300"
             >
               Download CV
             </a>
@@ -45,9 +51,8 @@ const Landing = () => {
           <div className="landing-section-button flex flex-1 justify-start">
             <a
               href="#"
-              className="landing_section_border_size_control contact_button z-[0] xl:w-auto lg:w-auto md:w-2/3 flex justify-center 2xl:text-3xl xl:text-2xl lg:text-lg font-regular border-0 rounded-md bg-custom-light-blue text-custom-dark-blue px-12 py-2 box-border transform hover:scale-110 transition-transform duration-300"
+              className="landing_section_border_size_control contact_button z-[0] w-auto md:w-[60%] lg:w-auto xl:w-auto flex justify-center 2xl:text-3xl xl:text-2xl lg:text-lg font-regular border-0 rounded-md bg-custom-light-blue text-custom-dark-blue px-12 py-2 box-border transform hover:scale-110 transition-transform duration-300"
             >
-              {/* Let's Talk */}
               <Typewriter
                 options={{
                   autoStart: true,
