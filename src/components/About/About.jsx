@@ -12,16 +12,16 @@ import Tab from "@mui/material/Tab";
 import { useState } from "react";
 import { ThemeProvider, createTheme } from "@mui/material";
 
-const AboutContent = () => {
+const AboutContent = ({
+  container_classes,
+  headers_classes,
+  normal_text_classes,
+}) => {
   return (
     <div
-      className="
-      AboutContent
-      my-auto
-      text-sm 
+      className={`AboutContent text-sm flex items-start leading-normal
       text-left sm:text-center md:text-center lg:text-left xl:text-left 2xl:text-left
-      sm:text-sm md:text-sm lg:text-lg xl:text-lg 2xl:text-lg
-      "
+      ${normal_text_classes}`}
     >
       A firm believer in the power of data seeking challenging projects. My
       expertise lies in turning data into visual stories and actionable insights
@@ -42,7 +42,11 @@ const AboutContent = () => {
   );
 };
 
-const SkillsContent = () => {
+const SkillsContent = ({
+  container_classes,
+  headers_classes,
+  normal_text_classes,
+}) => {
   const data_analysis_skills = [
     "Statistics",
     "Python/SQL",
@@ -54,8 +58,10 @@ const SkillsContent = () => {
   const web_development_skills = ["Html/Css/Js", "Figma", "React", "Git"];
 
   return (
-    <div className="SkillsContent w-full flex flex-col gap-8 sm:gap-8 md:gap-8 lg:gap-6 xl:gap-6 2xl:gap-10">
-      <div className="h-[15%] w-full px-2 flex justify-center items-center text-sm sm:text-md md:text-[16px] lg:text-[17px] xl:text-lg 2xl:text-xl">
+    <div
+      className={`SkillsContent w-full flex flex-col gap-8 sm:gap-8 md:gap-8 lg:gap-6 xl:gap-6 2xl:gap-10 ${normal_text_classes}`}
+    >
+      <div className={`h-[15%] w-full px-2 flex justify-center items-center`}>
         Technical competencies in many areas with a key proficiency in data
         analysis 📊
       </div>
@@ -69,12 +75,14 @@ const SkillsContent = () => {
                 alt="data_analysis_icon"
               />
             </div>
-            <div className="skills_title skills_title_data_analytics text-[14px] sm:text-[14.5px] md:text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-xl mx-10 xs:mx-10 sm:mx-0 md:mx-0 lg:mx-0 xl:mx-0 2xl:mx-0">
+            <div
+              className={`skills_title skills_title_data_analytics mx-10 xs:mx-10 sm:mx-0 md:mx-0 lg:mx-0 xl:mx-0 2xl:mx-0 ${normal_text_classes} font-normal`}
+            >
               Data Analysis
             </div>
           </div>
           <div className="skills_list_container">
-            <ul className="skills_listed flex flex-col gap-1 font-extralight text-[13px] sm:text-sm md:text-md lg:text-md xl:text-[17px] 2xl:text-lg">
+            <ul className="skills_listed flex flex-col gap-1 font-extralight">
               {data_analysis_skills.map((skill, index) => (
                 <li key={index}>{skill}</li>
               ))}
@@ -90,12 +98,14 @@ const SkillsContent = () => {
                 alt="machine_learning_icon"
               />
             </div>
-            <div className="skills_title text-[14px] sm:text-[14.5px] md:text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-xl mx-6 xs:mx-6 sm:mx-0 md:mx-0 lg:mx-0 xl:mx-0 2xl:mx-0">
+            <div
+              className={`skills_title mx-6 xs:mx-6 sm:mx-0 md:mx-0 lg:mx-0 xl:mx-0 2xl:mx-0 ${normal_text_classes} font-normal`}
+            >
               Machine Learning
             </div>
           </div>
           <div className="skills_list_container">
-            <ul className="skills_listed flex flex-col gap-1 font-extralight text-[13px] sm:text-sm md:text-md lg:text-md xl:text-[17px] 2xl:text-lg">
+            <ul className="skills_listed flex flex-col gap-1 font-extralight">
               {machine_learning_skills.map((skill, index) => (
                 <li key={index}>{skill}</li>
               ))}
@@ -111,12 +121,14 @@ const SkillsContent = () => {
                 alt="web_dev_icon"
               />
             </div>
-            <div className="skills_title text-[14px] sm:text-[14.5px] md:text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-xl mx-3 xs:mx-3 sm:mx-0 md:mx-0 lg:mx-0 xl:mx-0 2xl:mx-0">
+            <div
+              className={`skills_title mx-3 xs:mx-3 sm:mx-0 md:mx-0 lg:mx-0 xl:mx-0 2xl:mx-0 ${normal_text_classes} font-normal`}
+            >
               Web Development
             </div>
           </div>
           <div className="skills_list_container">
-            <ul className="skills_listed flex flex-col gap-1 font-extralight text-[13px] sm:text-sm md:text-md lg:text-md xl:text-[17px] 2xl:text-lg">
+            <ul className="skills_listed flex flex-col gap-1 font-extralight">
               {web_development_skills.map((skill, index) => (
                 <li key={index}>{skill}</li>
               ))}
@@ -128,7 +140,11 @@ const SkillsContent = () => {
   );
 };
 
-const ExperienceContent = () => {
+const ExperienceContent = ({
+  container_classes,
+  headers_classes,
+  normal_text_classes,
+}) => {
   const workExperiences = [
     {
       jobTitle: "Data Science Intern",
@@ -155,11 +171,11 @@ const ExperienceContent = () => {
 
   function WorkExperience({ jobTitle, date, company, description }) {
     return (
-      <div className="experience flex flex-col gap-2">
-        <div className="w-full text-left font-bold text-[16px] sm:text-lg md:text-lg lg:text-[19px] xl:text-xl 2xl:text-2xl">
+      <div className={`experience flex flex-col gap-2 ${normal_text_classes}`}>
+        <div className={`w-full text-left font-bold ${headers_classes}`}>
           {jobTitle}
         </div>
-        <div className="date_company_container flex flex-row text-left text-[13px] sm:text-[13.5px] md:text-[15px] lg:text-[15px] xl:text-md 2xl:text-lg">
+        <div className="date_company_container flex flex-row text-left">
           <div className=" text-left text-custom-light-blue">{date}</div>
           <div className="location_icon flex items-center ml-4 mr-6">
             <img src={location_icon} className="" alt="location_icon" />
@@ -168,9 +184,7 @@ const ExperienceContent = () => {
             {company}
           </div>
         </div>
-        <div className="text-left text-[13px] sm:text-[13.5px] md:text-[15px] lg:text-[15px] xl:text-md 2xl:text-lg">
-          {description}
-        </div>
+        <div className="text-left">{description}</div>
       </div>
     );
   }
@@ -269,9 +283,27 @@ const About = ({ container_classes, headers_classes, normal_text_classes }) => {
             </Paper>
           </ThemeProvider>
           <div className="flex justify-center sm:h-full md:h-full lg:h-full xl:h-full 2xl:h-auto">
-            {value === 0 && <AboutContent />}
-            {value === 1 && <SkillsContent />}
-            {value === 2 && <ExperienceContent />}
+            {value === 0 && (
+              <AboutContent
+                container_classes={container_classes}
+                headers_classes={headers_classes}
+                normal_text_classes={normal_text_classes}
+              />
+            )}
+            {value === 1 && (
+              <SkillsContent
+                container_classes={container_classes}
+                headers_classes={headers_classes}
+                normal_text_classes={normal_text_classes}
+              />
+            )}
+            {value === 2 && (
+              <ExperienceContent
+                container_classes={container_classes}
+                headers_classes={headers_classes}
+                normal_text_classes={normal_text_classes}
+              />
+            )}
           </div>
         </div>
       </div>

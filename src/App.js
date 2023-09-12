@@ -14,9 +14,9 @@ function App() {
   const container_classes =
     " container mx-auto sm:px-10 md:px-16 lg:px-10 xl:px-32 2xl:px-40 ";
   const headers_classes =
-    " font-bold text-[16px] sm:text-lg md:text-lg lg:text-[19px] xl:text-xl 2xl:text-2xl ";
+    " font-bold text-[16px] sm:text-lg md:text-lg lg:text-[19px] xl:text-[20px] 2xl:text-2xl ";
   const normal_text_classes =
-    " text-[13px] sm:text-[13.5px] md:text-[15px] lg:text-[15px] xl:text-md 2xl:text-lg ";
+    " text-[13px] sm:text-[13.5px] md:text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-lg ";
 
   return (
     <BrowserRouter>

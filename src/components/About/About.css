@@ -64,7 +64,7 @@
     .about_section_inner {
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        /* gap: 30px; */
     }
     .aboutPortraitImg {
         width: 70%;

@@ -11,7 +11,11 @@ import sunwayLogo from "../../images/logo/sunway.png";
 
 import awardIcon from "../../images/icons/award.png";
 
-const EducationContentCreator = () => {
+const EducationContentCreator = ({
+  container_classes,
+  headers_classes,
+  normal_text_classes,
+}) => {
   const educationContent = [
     {
       institute: "Sunway College Kathmandu",
@@ -59,10 +63,8 @@ const EducationContentCreator = () => {
     },
   ];
   return (
-    <div id="education_section">
-      <div className="font-bold text-left text-[16px] sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl">
-        Education
-      </div>
+    <div id="education_section" className={`${normal_text_classes}`}>
+      <div className={`font-bold text-left ${headers_classes}`}>Education</div>
       {educationContent.map((item, index) => (
         <div
           key={index}
@@ -75,7 +77,7 @@ const EducationContentCreator = () => {
               className="eduLogos w-[50%] sm:w-[60%] md:w-[40%] lg:w-[40%] xl:w-[40%]"
             />
           </div>
-          <div className="w-[90%] flex flex-col gap-2 text-[13px] sm:text-[13.5px] md:text-[15px] lg:text-[15px] xl:text-md 2xl:text-lg">
+          <div className="w-[90%] flex flex-col gap-2">
             <div className="flex justify-start">
               <span className="font-bold text-left">{item.institute}</span>
               <span className="text-left ml-3 font-extralight">
@@ -92,7 +94,11 @@ const EducationContentCreator = () => {
   );
 };
 
-const AwardsContentCreator = () => {
+const AwardsContentCreator = ({
+  container_classes,
+  headers_classes,
+  normal_text_classes,
+}) => {
   const awardsContent = [
     {
       title: "Notebook Expert",
@@ -120,11 +126,9 @@ const AwardsContentCreator = () => {
   return (
     <div
       id="awards_section"
-      className="pt-28 sm:pt-48 md:pt-48 lg:pt-40 xl:pt-40"
+      className={`pt-28 sm:pt-48 md:pt-48 lg:pt-40 xl:pt-40 ${normal_text_classes}`}
     >
-      <div className="font-bold text-left text-[16px] sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl">
-        Awards
-      </div>
+      <div className={`font-bold text-left ${headers_classes}`}>Awards</div>
       {awardsContent.map((item, index) => (
         <div
           key={index}
@@ -137,7 +141,7 @@ const AwardsContentCreator = () => {
               className="w-[30px] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[60%]"
             />
           </div>
-          <div className="w-[90%] flex flex-col  gap-2 text-[13px] sm:text-[13.5px] md:text-[15px] lg:text-[15px] xl:text-md 2xl:text-lg">
+          <div className="w-[90%] flex flex-col  gap-2">
             <div className="flex flex-wrap justify-start font-bold text-left">
               {item.title}
             </div>
@@ -188,7 +192,7 @@ const EducationAwards = ({
         flex gap-3 sm:gap-14 md:gap-14 lg:gap-4 xl:gap-4`}
     >
       <StickyBox
-        className="sticky_sidebar w-[32%] font-semibold text-[16px] sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl"
+        className={`sticky_sidebar w-[32%] font-semibold ${headers_classes}`}
         offsetTop={200}
         offsetBottom={20}
       >
@@ -214,8 +218,16 @@ const EducationAwards = ({
         onUpdateCallback={handleUpdateCallback}
         className="flex-auto flex flex-col text-[13px] sm:text-[13.5px] md:text-[15px] lg:text-[15px] xl:text-md 2xl:text-lg"
       >
-        <EducationContentCreator />
-        <AwardsContentCreator />
+        <EducationContentCreator
+          container_classes={container_classes}
+          headers_classes={headers_classes}
+          normal_text_classes={normal_text_classes}
+        />
+        <AwardsContentCreator
+          container_classes={container_classes}
+          headers_classes={headers_classes}
+          normal_text_classes={normal_text_classes}
+        />
       </ScrollSpy>
     </div>
   );
