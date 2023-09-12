@@ -12,7 +12,7 @@ const Landing = ({
     <>
       <div className="w-full py-9"></div>
       <div
-        className={`landing_section ${container_classes} pt-28 sm:pt-24 md:pt-16 lg:pt-20 xl:pt-28`}
+        className={`landing_section ${container_classes} pt-12 sm:pt-16 md:pt-16 lg:pt-20 xl:pt-28`}
       >
         <div className="landing_section_inner flex flex-wrap justify-center w-full gap-10">
           <div className="flex flex-1 justify-end">

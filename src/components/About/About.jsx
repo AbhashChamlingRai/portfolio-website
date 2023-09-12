@@ -220,7 +220,7 @@ const About = ({ container_classes, headers_classes, normal_text_classes }) => {
 
   return (
     <div
-      className={`about_section ${container_classes} pt-28 sm:pt-48 md:pt-48 lg:pt-40 xl:pt-40`}
+      className={`about_section ${container_classes}`}
       // className="about_section container mx-auto py-20
       // sm:px-10 md:px-16 lg:px-10 xl:px-32 2xl:px-40"
     >

@@ -26,26 +26,32 @@ function App() {
         <div className="App">
           <Navbar />
           <SideLinks />
-          <Landing
-            container_classes={container_classes}
-            headers_classes={headers_classes}
-            normal_text_classes={normal_text_classes}
-          />
-          <About
-            container_classes={container_classes}
-            headers_classes={headers_classes}
-            normal_text_classes={normal_text_classes}
-          />
-          <EducationAwards
-            container_classes={container_classes}
-            headers_classes={headers_classes}
-            normal_text_classes={normal_text_classes}
-          />
-          <Portfolio
-            container_classes={container_classes}
-            headers_classes={headers_classes}
-            normal_text_classes={normal_text_classes}
-          />
+          <div className="flex flex-col gap-40">
+            <div>
+              {" "}
+              {/* div needed to remove gap on first flex element */}
+              <Landing
+                container_classes={container_classes}
+                headers_classes={headers_classes}
+                normal_text_classes={normal_text_classes}
+              />
+            </div>
+            <About
+              container_classes={container_classes}
+              headers_classes={headers_classes}
+              normal_text_classes={normal_text_classes}
+            />
+            <EducationAwards
+              container_classes={container_classes}
+              headers_classes={headers_classes}
+              normal_text_classes={normal_text_classes}
+            />
+            <Portfolio
+              container_classes={container_classes}
+              headers_classes={headers_classes}
+              normal_text_classes={normal_text_classes}
+            />
+          </div>
         </div>
       </MyContext.Provider>
     </BrowserRouter>

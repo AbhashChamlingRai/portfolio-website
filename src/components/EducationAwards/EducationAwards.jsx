@@ -188,7 +188,6 @@ const EducationAwards = ({
     <div
       style={{ display: "flex", alignItems: "flex-start" }}
       className={`EducationAwards px-14 ${container_classes}
-      pt-28 sm:pt-48 md:pt-48 lg:pt-40 xl:pt-40
         flex gap-3 sm:gap-6 md:gap-8 lg:gap-4 xl:gap-4`}
     >
       {/* md:w-[40%] lg:w-[30%] xl:w-[30%] */}
@@ -198,14 +197,14 @@ const EducationAwards = ({
         offsetBottom={20}
       >
         <div
-          className="text-left transition-all duration-300 ease-in-out"
+          className="text-custom-light-blue text-left transition-all duration-300 ease-in-out"
           id="education_text"
           data-to-scrollspy-id="education_section"
         >
           {educationText}
         </div>
         <div
-          className="text-left transition-all duration-300 ease-in-out"
+          className="text-custom-light-blue text-left transition-all duration-300 ease-in-out"
           data-to-scrollspy-id="awards_section"
         >
           {awardsText}
