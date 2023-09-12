@@ -175,11 +175,11 @@ const EducationAwards = ({
   const handleUpdateCallback = (id) => {
     // Check the ID of the active element and set content accordingly
     if (id === "education_section") {
-      setEducationText("*Education");
+      setEducationText("- Education");
       setAwardsText("Awards");
     } else if (id === "awards_section") {
       setEducationText("Education");
-      setAwardsText("*Awards");
+      setAwardsText("- Awards");
     }
     console.log(id);
   };
@@ -189,10 +189,11 @@ const EducationAwards = ({
       style={{ display: "flex", alignItems: "flex-start" }}
       className={`EducationAwards px-14 ${container_classes}
       pt-28 sm:pt-48 md:pt-48 lg:pt-40 xl:pt-40
-        flex gap-3 sm:gap-14 md:gap-14 lg:gap-4 xl:gap-4`}
+        flex gap-3 sm:gap-6 md:gap-8 lg:gap-4 xl:gap-4`}
     >
+      {/* md:w-[40%] lg:w-[30%] xl:w-[30%] */}
       <StickyBox
-        className={`sticky_sidebar w-[32%] font-semibold ${headers_classes}`}
+        className={`sticky_sidebar sm:w-[70%] md:w-[60%] lg:w-[30%] xl:w-[30%] font-semibold ${headers_classes}`}
         offsetTop={200}
         offsetBottom={20}
       >
