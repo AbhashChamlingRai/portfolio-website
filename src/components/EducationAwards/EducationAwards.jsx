@@ -187,7 +187,7 @@ const EducationAwards = ({
   return (
     <div
       style={{ display: "flex", alignItems: "flex-start" }}
-      className={`EducationAwards px-14 ${container_classes}
+      className={`EducationAwards ${container_classes} px-7
         flex gap-3 sm:gap-6 md:gap-8 lg:gap-4 xl:gap-4`}
     >
       {/* md:w-[40%] lg:w-[30%] xl:w-[30%] */}

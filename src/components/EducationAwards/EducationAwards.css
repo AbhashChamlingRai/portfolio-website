@@ -16,5 +16,6 @@
 @media (max-width:640px) {
     .sticky_sidebar {
         display: none;
+        width: 0;
     }
 }
