@@ -39,7 +39,7 @@ const Portfolio = ({
   const ProjectCard = ({ project }) => {
     return (
       <div
-        className="project-card 
+        className="project-card shadow-xl
         w-[80%] sm:w-[70%] md:w-[70%] lg:w-[45%] xl:w-[45%] box-border 
         h-[220px] sm:h-[250px] md:h-[280px] lg:h-[300px] xl:h-[350px]"
         style={{
