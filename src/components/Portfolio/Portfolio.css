@@ -1,3 +1,12 @@
 .portfolio_section, .portfolio_section div {
     /* border: 1px solid red; */
 }
+
+.project-hover-layer {
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.project-card:hover .project-hover-layer {
+    opacity: 100; /* Display .hoverone when hovering over .parent */
+}

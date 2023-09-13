@@ -45,7 +45,7 @@ const Portfolio = ({
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="bg-custom-project-blue w-full h-full flex flex-col justify-center items-center px-20 gap-5">
+        <div className="project-hover-layer bg-custom-project-blue w-full h-full flex flex-col justify-center items-center px-20 gap-5">
           <div className={`${headers_classes}`}>{project.projectTitle}</div>
           <div className="text-[10px] md:text-[11px] lg:text-[12px] xl:text-md">
             {project.projectType}
