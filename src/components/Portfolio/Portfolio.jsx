@@ -14,21 +14,25 @@ const Portfolio = ({
       coverImg: attendance_management_system,
       projectTitle: "Attendance Management System",
       projectType: "COMPUTER VISION & DATA ANALYSIS",
+      link: "",
     },
     {
       coverImg: customer_churn,
       projectTitle: "Customer Churn Prediction",
       projectType: "MACHINE LEARNING CLASSIFICATION & DATA ANALYSIS",
+      link: "",
     },
     {
       coverImg: sydney_housing_analysis,
       projectTitle: "Sydney Housing Market Analysis",
       projectType: "DATA ANALYSIS",
+      link: "",
     },
     {
       coverImg: co2_prediction,
       projectTitle: "CO2 Emissions Prediction",
       projectType: "MACHINE LEARNING REGRESSION & DATA ANALYSIS",
+      link: "",
     },
   ];
 
@@ -45,11 +49,19 @@ const Portfolio = ({
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="project-hover-layer bg-custom-project-blue w-full h-full flex flex-col justify-center items-center px-20 gap-5">
+        <div className="project-hover-layer bg-custom-project-blue w-full h-full flex flex-col justify-center items-center px-10 sm:px-20 gap-5">
           <div className={`${headers_classes}`}>{project.projectTitle}</div>
           <div className="text-[10px] md:text-[11px] lg:text-[12px] xl:text-md">
             {project.projectType}
           </div>
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${headers_classes} font-semibold py-2 px-5 bg-custom-dark-blue shadow-md`}
+          >
+            View Project
+          </a>
         </div>
         {/* <img src={project.coverImg} alt={project.projectTitle} /> */}
       </div>
