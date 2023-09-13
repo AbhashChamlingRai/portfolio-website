@@ -70,11 +70,15 @@ const Portfolio = ({
 
   return (
     <div
-      className={`portfolio_section flex flex-col gap-10 ${container_classes}`}
+      className={`portfolio_section flex flex-col gap-16 ${container_classes}`}
     >
-      <div className="w-full flex flex-col">
-        <div>PORTFOLIO</div>
-        <div>Some of my works</div>
+      <div className="w-full flex flex-col gap-2">
+        <div className={`${normal_text_classes} text-custom-light-blue`}>
+          PORTFOLIO
+        </div>
+        <div className="text-[18px] sm:text-[22px] md:text-2xl lg:text-2xl xl:text-3xl font-semibold">
+          Some of my works
+        </div>
       </div>
       <div class="flex flex-wrap gap-10 justify-center">
         {projects.map((project, index) => (
