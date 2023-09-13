@@ -14,7 +14,7 @@ const Portfolio = ({
       coverImg: attendance_management_system,
       projectTitle: "Attendance Management System",
       projectType: "COMPUTER VISION & DATA ANALYSIS",
-      link: "",
+      link: "https://github.com/AbhashChamlingRai/attendance-system/",
     },
     {
       coverImg: customer_churn,
@@ -26,13 +26,13 @@ const Portfolio = ({
       coverImg: sydney_housing_analysis,
       projectTitle: "Sydney Housing Market Analysis",
       projectType: "DATA ANALYSIS",
-      link: "",
+      link: "https://www.kaggle.com/code/abhashrai/sydney-house-prices-analysis/",
     },
     {
       coverImg: co2_prediction,
       projectTitle: "CO2 Emissions Prediction",
       projectType: "MACHINE LEARNING REGRESSION & DATA ANALYSIS",
-      link: "",
+      link: "https://www.kaggle.com/code/abhashrai/predicting-co2-emissions-ps-s3e20/",
     },
   ];
 
