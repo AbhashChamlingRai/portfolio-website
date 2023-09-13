@@ -8,6 +8,9 @@ module.exports = {
         "custom-darker-blue": "#1F1F38",
         "custom-light-blue": "#45DBE2",
       },
+      backgroundColor: {
+        "custom-project-blue": "rgba(7, 121, 228, 0.85)",
+      },
     },
   },
   plugins: [],

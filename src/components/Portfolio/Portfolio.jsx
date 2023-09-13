@@ -45,9 +45,13 @@ const Portfolio = ({
           backgroundRepeat: "no-repeat",
         }}
       >
+        <div className="bg-custom-project-blue w-full h-full flex flex-col justify-center items-center px-20 gap-5">
+          <div className={`${headers_classes}`}>{project.projectTitle}</div>
+          <div className="text-[10px] md:text-[11px] lg:text-[12px] xl:text-md">
+            {project.projectType}
+          </div>
+        </div>
         {/* <img src={project.coverImg} alt={project.projectTitle} /> */}
-        <h2>{project.projectTitle}</h2>
-        <p>{project.projectType}</p>
       </div>
     );
   };
