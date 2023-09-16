@@ -8,6 +8,7 @@ import EducationAwards from "./components/EducationAwards/EducationAwards";
 import Portfolio from "./components/Portfolio/Portfolio";
 import { createContext } from "react";
 import ContactForm from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 const MyContext = createContext("");
 
@@ -53,6 +54,11 @@ function App() {
               normal_text_classes={normal_text_classes}
             />
             <ContactForm
+              container_classes={container_classes}
+              headers_classes={headers_classes}
+              normal_text_classes={normal_text_classes}
+            />
+            <Footer
               container_classes={container_classes}
               headers_classes={headers_classes}
               normal_text_classes={normal_text_classes}
