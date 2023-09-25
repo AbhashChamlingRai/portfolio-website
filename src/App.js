@@ -1,14 +1,8 @@
 import "./App.css";
-import { BrowserRouter } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
-import Landing from "./components/Landing/Landing";
-import SideLinks from "./components/SideLinks/SideLinks";
-import About from "./components/About/About";
-import EducationAwards from "./components/EducationAwards/EducationAwards";
-import Portfolio from "./components/Portfolio/Portfolio";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { createContext } from "react";
-import ContactForm from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
+import MainPage from "./pages/MainPage";
+import BlogsPage from "./pages/BlogsPage";
 
 const MyContext = createContext("");
 
@@ -21,52 +15,35 @@ function App() {
     " text-[13px] sm:text-[13.5px] md:text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-lg ";
 
   return (
-    <BrowserRouter>
-      <MyContext.Provider
-        value={{ container_classes, headers_classes, normal_text_classes }}
-      >
-        <div className="App">
-          <Navbar />
-          <SideLinks />
-          <div className="flex flex-col gap-40">
-            <div>
-              {" "}
-              {/* div needed to remove gap on first flex element */}
-              <Landing
+    <MyContext.Provider
+      value={{ container_classes, headers_classes, normal_text_classes }}
+    >
+      <BrowserRouter>
+        <Routes>
+          <Route
+            index
+            path="/"
+            element={
+              <MainPage
                 container_classes={container_classes}
                 headers_classes={headers_classes}
                 normal_text_classes={normal_text_classes}
               />
-            </div>
-            <About
-              container_classes={container_classes}
-              headers_classes={headers_classes}
-              normal_text_classes={normal_text_classes}
-            />
-            <EducationAwards
-              container_classes={container_classes}
-              headers_classes={headers_classes}
-              normal_text_classes={normal_text_classes}
-            />
-            <Portfolio
-              container_classes={container_classes}
-              headers_classes={headers_classes}
-              normal_text_classes={normal_text_classes}
-            />
-            <ContactForm
-              container_classes={container_classes}
-              headers_classes={headers_classes}
-              normal_text_classes={normal_text_classes}
-            />
-            <Footer
-              container_classes={container_classes}
-              headers_classes={headers_classes}
-              normal_text_classes={normal_text_classes}
-            />
-          </div>
-        </div>
-      </MyContext.Provider>
-    </BrowserRouter>
+            }
+          />
+          <Route
+            path="/blogs"
+            element={
+              <BlogsPage
+                container_classes={container_classes}
+                headers_classes={headers_classes}
+                normal_text_classes={normal_text_classes}
+              />
+            }
+          />
+        </Routes>
+      </BrowserRouter>
+    </MyContext.Provider>
   );
 }
 
