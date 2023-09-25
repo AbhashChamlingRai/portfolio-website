@@ -190,21 +190,20 @@ const EducationAwards = ({
       className={`EducationAwards ${container_classes} px-7
         flex gap-3 sm:gap-6 md:gap-8 lg:gap-4 xl:gap-4`}
     >
-      {/* md:w-[40%] lg:w-[30%] xl:w-[30%] */}
       <StickyBox
         className={`sticky_sidebar sm:w-[70%] md:w-[60%] lg:w-[30%] xl:w-[30%] font-semibold ${headers_classes}`}
         offsetTop={200}
         offsetBottom={20}
       >
         <div
-          className="text-custom-light-blue text-left transition-all duration-300 ease-in-out"
+          className="text-white text-left transition-all duration-300 ease-in-out"
           id="education_text"
           data-to-scrollspy-id="education_section"
         >
           {educationText}
         </div>
         <div
-          className="text-custom-light-blue text-left transition-all duration-300 ease-in-out"
+          className="text-white text-left transition-all duration-300 ease-in-out"
           data-to-scrollspy-id="awards_section"
         >
           {awardsText}

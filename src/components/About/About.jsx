@@ -147,13 +147,6 @@ const ExperienceContent = ({
 }) => {
   const workExperiences = [
     {
-      jobTitle: "Data Science Intern",
-      date: "Nov 2023 - Present",
-      company: "LetsGrowMore",
-      description:
-        "Undertook a variety of projects, encompassing classification, time series forecasting, recommendation systems, image processing, exploratory data analysis, advanced tasks such as hand-written digit classification with CNN, next-word prediction with RNN, hand-written equation solving with CNN, and facial emotion classification.",
-    },
-    {
       jobTitle: "Data Fellowship",
       date: "Aug 2023 - Present",
       company: "Sunway Student Representative Council",
