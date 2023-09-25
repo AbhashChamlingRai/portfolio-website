@@ -35,6 +35,7 @@ function ContactForm({
   };
   return (
     <div
+      id="contact"
       className={`contact_section px-10 ${container_classes} flex flex-col gap-14`}
     >
       <div className="contact_intro flex flex-col gap-2">

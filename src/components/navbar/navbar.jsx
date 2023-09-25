@@ -1,20 +1,21 @@
 import Logo from "../../Logo.svg";
 import "./Navbar.css";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   let Links = [
     { name: "Home", link: "/" },
-    { name: "About", link: "/" },
-    { name: "Projects", link: "/" },
-    { name: "Blogs", link: "/" },
-    { name: "Contact", link: "/" },
+    { name: "About", link: "#about" },
+    { name: "Projects", link: "#projects" },
+    { name: "Blogs", link: "/blogs" },
+    { name: "Contact", link: "#contact" },
   ];
   let [open, setOpen] = useState(false);
 
   return (
     <div className="railway z-[100] shadow-md w-full fixed top-0 left-0 bg-custom-dark-blue">
-      <div className="md:flex container mx-auto items-center justify-between bg-red py-4 md:px-10 px-7 bg-custom-dark-blue container mx-auto">
+      <div className="md:flex container mx-auto items-center justify-between bg-red py-4 md:px-10 px-7 bg-custom-dark-blue">
         <div
           className="font-bold text-2xl cursor-pointer flex items-center  
       text-gray-800"
@@ -39,12 +40,16 @@ const Navbar = () => {
         >
           {Links.map((link) => (
             <li key={link.name} className="md:ml-8 text-xl md:my-0 my-7">
-              <a
-                href={link.link}
-                className="hover:text-sky-400 transition-transform duration-500"
-              >
-                {link.name}
-              </a>
+              {link.name === "Home" || link.name === "Blogs" ? (
+                <Link to={link.link}>{link.name}</Link>
+              ) : (
+                <a
+                  href={link.link}
+                  className="hover:text-sky-400 transition-transform duration-500"
+                >
+                  {link.name}
+                </a>
+              )}
             </li>
           ))}
         </ul>

@@ -70,6 +70,7 @@ const Portfolio = ({
 
   return (
     <div
+      id="projects"
       className={`portfolio_section flex flex-col gap-16 ${container_classes}`}
     >
       <div className="w-full flex flex-col gap-2">
