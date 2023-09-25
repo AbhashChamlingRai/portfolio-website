@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./Contact.css";
+import { useForm } from "@formspree/react";
 
 // Custom hook for handling form inputs
-function useForm(initialState) {
+function useFormVals(initialState) {
   const [values, setValues] = useState(initialState);
 
   const handleChange = (e) => {
@@ -21,18 +22,25 @@ function ContactForm({
   headers_classes,
   normal_text_classes,
 }) {
+  const form = useRef();
+
   const initialFormValues = {
     fullName: "",
     email: "",
     subject: "",
     message: "",
   };
-  const [formValues, setFormValues] = useForm(initialFormValues);
+  const [formValues, setFormValues] = useFormVals(initialFormValues);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formValues);
-  };
+  const [state, handleSubmitForm] = useForm("mzbljqdk");
+  if (state.succeeded) {
+    return (
+      <div className={`${container_classes} px-10 ${headers_classes}`}>
+        Thank you for contacting me. I'll get back to you as soon as I can.
+      </div>
+    );
+  }
+
   return (
     <div
       id="contact"
@@ -75,7 +83,11 @@ function ContactForm({
       </div>
 
       <div className="contact_form">
-        <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+        <form
+          ref={form}
+          onSubmit={handleSubmitForm}
+          className="flex flex-col gap-6"
+        >
           <div className="flex flex-row gap-8 sm:gap-16">
             <div className="flex-1">
               {/* <label htmlFor="fullName">Full Name</label> */}
