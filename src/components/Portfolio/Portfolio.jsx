@@ -49,9 +49,9 @@ const Portfolio = ({
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="project-hover-layer bg-custom-project-blue w-full h-full flex flex-col justify-center items-center px-10 sm:px-20 gap-5">
+        <div className="project-hover-layer bg-custom-project-blue w-full h-full flex flex-col justify-center items-center px-10 sm:px-20 gap-5 text-center">
           <div className={`${headers_classes}`}>{project.projectTitle}</div>
-          <div className="text-[10px] md:text-[11px] lg:text-[12px] xl:text-md">
+          <div className="text-[10px] md:text-[11px] lg:text-[12px] xl:text-md text-center">
             {project.projectType}
           </div>
           <a
@@ -74,10 +74,12 @@ const Portfolio = ({
       className={`portfolio_section flex flex-col gap-16 ${container_classes}`}
     >
       <div className="w-full flex flex-col gap-2">
-        <div className={`${normal_text_classes} text-custom-light-blue`}>
+        <div
+          className={`${normal_text_classes} text-custom-light-blue text-center`}
+        >
           PORTFOLIO
         </div>
-        <div className="text-[18px] sm:text-[22px] md:text-2xl lg:text-2xl xl:text-3xl font-semibold">
+        <div className="text-[18px] sm:text-[22px] md:text-2xl lg:text-2xl xl:text-3xl font-semibold text-center">
           Some of my works
         </div>
       </div>

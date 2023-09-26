@@ -47,10 +47,10 @@ function ContactForm({
       className={`contact_section px-10 ${container_classes} flex flex-col gap-14`}
     >
       <div className="contact_intro flex flex-col gap-2">
-        <div className="text-[18px] sm:text-[22px] md:text-2xl lg:text-2xl xl:text-3xl font-semibold">
+        <div className="text-[18px] sm:text-[22px] md:text-2xl lg:text-2xl xl:text-3xl font-semibold text-center">
           Contact me
         </div>
-        <div className={`${normal_text_classes}`}>
+        <div className={`${normal_text_classes} text-center`}>
           I'm always open for any suggestion or just to have a chat
         </div>
       </div>
@@ -141,10 +141,10 @@ function ContactForm({
                         h-[200px]`}
             />
           </div>
-          <div>
+          <div className="flex justify-center">
             <button
               type="submit"
-              className={`focus:border-teal focus:outline-none focus:ring-0 ${normal_text_classes} font-semibold bg-custom-light-blue text-custom-darker-blue border-0 w-[30%] sm:w-[15%] h-[40px] rounded-lg hover:bg-[#39b1b7]`}
+              className={`focus:border-teal focus:outline-none focus:ring-0 ${normal_text_classes} font-semibold bg-custom-light-blue text-custom-darker-blue border-0 w-[30%] sm:w-[15%] h-[40px] rounded-lg hover:bg-[#39b1b7] `}
             >
               Send
             </button>

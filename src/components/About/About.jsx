@@ -65,7 +65,7 @@ const SkillsContent = ({
         Technical competencies in many areas with a key proficiency in data
         analysis 📊
       </div>
-      <div className="SkillsContent_skills_container_outer h-[85%] w-full flex flex-row gap-3 justify-center items-center">
+      <div className="SkillsContent_skills_container_outer text-center h-[85%] w-full flex flex-row gap-3 justify-center items-center">
         <div className="SkillsContent_skills_container left_skill_section flex-1 h-full flex flex-col gap-8">
           <div className="skill_title flex flex-col gap-3">
             <div className="flex justify-center">
