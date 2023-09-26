@@ -14,7 +14,11 @@
     color: white !important;
 }
 .MuiTab-textColorPrimary.Mui-selected {
-    color: #45DBE2 !important; /* Replace with your desired color */
+    color: #1F1F38 !important;
+    background-color: #45DBE2 !important;
+    /* border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important; */
+    transition: all 0.3s ease-in;
 }
 .MuiTabs-scroller {
     display: flex !important;
