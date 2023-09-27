@@ -14,7 +14,7 @@ const Navbar = () => {
   let [open, setOpen] = useState(false);
 
   return (
-    <div className="railway z-[100] shadow-md w-full fixed top-0 left-0 bg-custom-dark-blue">
+    <div className="railway z-40 shadow-md w-full fixed top-0 left-0 bg-custom-dark-blue">
       <div className="md:flex container mx-auto items-center justify-between bg-red py-4 md:px-10 px-7 bg-custom-dark-blue">
         <div
           className="font-bold text-2xl cursor-pointer flex items-center  

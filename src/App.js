@@ -4,6 +4,9 @@ import { createContext } from "react";
 import MainPage from "./pages/MainPage";
 import BlogsPage from "./pages/BlogsPage";
 import AnimatedBackground from "./components/AnimatedBackground/AnimatedBackground";
+import ResumePopup from "./components/ResumePopUp/ResumePopUp";
+
+import myResume from "./images/resume.png";
 
 const MyContext = createContext("");
 
@@ -16,38 +19,41 @@ function App() {
     " text-[13px] sm:text-[13.5px] md:text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-lg ";
 
   return (
-    <div className="relative">
-      <AnimatedBackground />
-      <MyContext.Provider
-        value={{ container_classes, headers_classes, normal_text_classes }}
-      >
-        <BrowserRouter>
-          <Routes>
-            <Route
-              index
-              path="/"
-              element={
-                <MainPage
-                  container_classes={container_classes}
-                  headers_classes={headers_classes}
-                  normal_text_classes={normal_text_classes}
-                />
-              }
-            />
-            <Route
-              path="/blogs"
-              element={
-                <BlogsPage
-                  container_classes={container_classes}
-                  headers_classes={headers_classes}
-                  normal_text_classes={normal_text_classes}
-                />
-              }
-            />
-          </Routes>
-        </BrowserRouter>
-      </MyContext.Provider>
-    </div>
+    <>
+      <ResumePopup imageUrl={myResume} />
+      <div className="relative">
+        <AnimatedBackground />
+        <MyContext.Provider
+          value={{ container_classes, headers_classes, normal_text_classes }}
+        >
+          <BrowserRouter>
+            <Routes>
+              <Route
+                index
+                path="/"
+                element={
+                  <MainPage
+                    container_classes={container_classes}
+                    headers_classes={headers_classes}
+                    normal_text_classes={normal_text_classes}
+                  />
+                }
+              />
+              <Route
+                path="/blogs"
+                element={
+                  <BlogsPage
+                    container_classes={container_classes}
+                    headers_classes={headers_classes}
+                    normal_text_classes={normal_text_classes}
+                  />
+                }
+              />
+            </Routes>
+          </BrowserRouter>
+        </MyContext.Provider>
+      </div>
+    </>
   );
 }
 
