@@ -15,35 +15,42 @@ function App() {
     " text-[13px] sm:text-[13.5px] md:text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-lg ";
 
   return (
-    <MyContext.Provider
-      value={{ container_classes, headers_classes, normal_text_classes }}
-    >
-      <BrowserRouter>
-        <Routes>
-          <Route
-            index
-            path="/"
-            element={
-              <MainPage
-                container_classes={container_classes}
-                headers_classes={headers_classes}
-                normal_text_classes={normal_text_classes}
-              />
-            }
-          />
-          <Route
-            path="/blogs"
-            element={
-              <BlogsPage
-                container_classes={container_classes}
-                headers_classes={headers_classes}
-                normal_text_classes={normal_text_classes}
-              />
-            }
-          />
-        </Routes>
-      </BrowserRouter>
-    </MyContext.Provider>
+    <div className="relative">
+      <div id="stars-container">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+      </div>
+      <MyContext.Provider
+        value={{ container_classes, headers_classes, normal_text_classes }}
+      >
+        <BrowserRouter>
+          <Routes>
+            <Route
+              index
+              path="/"
+              element={
+                <MainPage
+                  container_classes={container_classes}
+                  headers_classes={headers_classes}
+                  normal_text_classes={normal_text_classes}
+                />
+              }
+            />
+            <Route
+              path="/blogs"
+              element={
+                <BlogsPage
+                  container_classes={container_classes}
+                  headers_classes={headers_classes}
+                  normal_text_classes={normal_text_classes}
+                />
+              }
+            />
+          </Routes>
+        </BrowserRouter>
+      </MyContext.Provider>
+    </div>
   );
 }
 
