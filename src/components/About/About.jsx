@@ -201,7 +201,7 @@ const ExperienceContent = ({
 
 const About = ({ container_classes, headers_classes, normal_text_classes }) => {
   console.log(container_classes);
-  const [value, setValue] = useState(2);
+  const [value, setValue] = useState(1);
 
   const theme = createTheme({
     palette: {
