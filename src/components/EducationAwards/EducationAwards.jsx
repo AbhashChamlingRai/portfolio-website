@@ -67,6 +67,7 @@ const EducationContentCreator = ({
       <div className={`font-bold text-left ${headers_classes}`}>Education</div>
       {educationContent.map((item, index) => (
         <div
+          data-aos="fade-left"
           key={index}
           className="flex flex-row py-8 border-b-[1px] border-white border-opacity-50 gap-2"
         >
@@ -131,6 +132,7 @@ const AwardsContentCreator = ({
       <div className={`font-bold text-left ${headers_classes}`}>Awards</div>
       {awardsContent.map((item, index) => (
         <div
+          data-aos="fade-left"
           key={index}
           className="flex flex-row py-8 border-b-[1px] border-white border-opacity-50 gap-2"
         >
