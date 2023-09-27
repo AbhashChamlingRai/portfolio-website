@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { createContext } from "react";
 import MainPage from "./pages/MainPage";
 import BlogsPage from "./pages/BlogsPage";
+import AnimatedBackground from "./components/AnimatedBackground/AnimatedBackground";
 
 const MyContext = createContext("");
 
@@ -16,11 +17,7 @@ function App() {
 
   return (
     <div className="relative">
-      <div id="stars-container">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
-      </div>
+      <AnimatedBackground />
       <MyContext.Provider
         value={{ container_classes, headers_classes, normal_text_classes }}
       >
