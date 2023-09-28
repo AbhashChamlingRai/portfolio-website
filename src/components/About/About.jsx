@@ -151,7 +151,7 @@ const ExperienceContent = ({
       date: "Aug 2023 - Present",
       company: "Sunway College Kathmandu",
       description:
-        "Working as project lead - Leading a research team to conduct research, perform literature reviews, and develop necessary systems for the college. Developed projects like attendance system using computer vision.",
+        "Working as project lead - Leading research team to conduct research, perform literature reviews, and develop necessary systems for the college. Developed projects like attendance system using computer vision.",
     },
     {
       jobTitle: "Data Fellowship",
