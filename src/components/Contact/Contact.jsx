@@ -35,7 +35,9 @@ function ContactForm({
   const [state, handleSubmitForm] = useForm("mzbljqdk");
   if (state.succeeded) {
     return (
-      <div className={`${container_classes} px-10 ${headers_classes}`}>
+      <div
+        className={`${container_classes} px-10 ${headers_classes} text-center w-full`}
+      >
         Thank you for contacting me. I'll get back to you as soon as I can.
       </div>
     );
